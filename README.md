@@ -5,6 +5,9 @@
 > 这不是可以直接开机的 EFI。`config.plist` 里的 SMBIOS 四项已换成占位值，
 > Apple 自有 kext 与所有第三方二进制都没有随仓库分发。用法见下面「怎么用」。
 
+本快照的 `config.plist` 已用 OpenCore 1.0.9 的 `ocvalidate` 校验：
+**No issues found**（脱敏替换四项后同样通过）。
+
 ## 硬件
 
 | 部件 | 型号 |
