@@ -15,7 +15,7 @@
 | 功能 | 状态 | 证据 |
 | --- | --- | --- |
 | 显卡 | ✅ 正常 | RTX 5060 8 GB，`Metal 3`，输出 3840×2160@160 Hz |
-| 有线网卡 | ✅ 正常 | `en0` UP，RTL8125，`192.168.1.204` |
+| 有线网卡 | ✅ 正常 | `en0` UP，RTL8125，已取得 DHCP 地址（内网地址不公开） |
 | Wi-Fi | ⚠️ 驱动在、无线电关 | `AirportMtk 0.1.0`（fw MT7922）加载，`en1` 存在，`Wi-Fi Power: Off` |
 | 蓝牙 | ❌ 本次未工作 | `State: Off`、`Address: NULL`；`SimpleMtkBtPatcher` 已加载但未匹配 |
 | 音频 | ✅ 多路输出 | 内置扬声器/麦克风、数字输出、HDMI（Mi Monitor）、USB HECATE G2000 |
