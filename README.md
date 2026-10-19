@@ -8,6 +8,22 @@
 本快照的 `config.plist` 已用 OpenCore 1.0.9 的 `ocvalidate` 校验：
 **No issues found**（脱敏替换四项后同样通过）。
 
+## 实测状态（2026-10-19 20:37）
+
+下面只写本次取证能拿出证据的状态，未验证的项目不列。
+
+| 功能 | 状态 | 证据 |
+| --- | --- | --- |
+| 显卡 | ✅ 正常 | RTX 5060 8 GB，`Metal 3`，输出 3840×2160@160 Hz |
+| 有线网卡 | ✅ 正常 | `en0` UP，RTL8125，`192.168.1.204` |
+| Wi-Fi | ⚠️ 驱动在、无线电关 | `AirportMtk 0.1.0`（fw MT7922）加载，`en1` 存在，`Wi-Fi Power: Off` |
+| 蓝牙 | ❌ 本次未工作 | `State: Off`、`Address: NULL`；`SimpleMtkBtPatcher` 已加载但未匹配 |
+| 音频 | ✅ 多路输出 | 内置扬声器/麦克风、数字输出、HDMI（Mi Monitor）、USB HECATE G2000 |
+| USB | ✅ 正常 | 4 个 XHCI 控制器，10 Gb/s 设备可枚举，`UTBMap` 生效 |
+
+取证命令：`system_profiler SPDisplaysDataType/SPAudioDataType/SPAirPortDataType/SPBluetoothDataType`、
+`networksetup -getairportpower en1`、`kextstat -l`、`system_profiler SPUSBDataType`。
+
 ## 硬件
 
 | 部件 | 型号 |
@@ -55,13 +71,15 @@
   `IOSkywalkFamily` + `IO80211FamilyLegacy`。
 - **MT7922 蓝牙**：`SimpleMtkBtFw` + `SimpleMtkBtPatcher` + `BlueToolFixup`。
 - **USB**：`USBToolBox` + 本机端口映射 `UTBMap.kext`；`UTBDefault.kext` 保留但禁用。
-- **音频**：`AppleALC`，`alcid=3`。
+- **音频**：`AppleALC` + NullMoth `NMHDA`（HDMI 音频）；`DeviceProperties` 注入 `layout-id=2`，
+  `boot-args` 另带 `alcid=3`。`NMHDALink` / `NMHDAVol` / `NMProbeAudio` 保持禁用。
 - **NVRAM**：AM5 平台固件写入脆弱，`Booter/Quirks/DisableVariableWrite` 保持 `true`。
 
 ## 已知限制
 
 - 目标系统是 macOS 15.x；macOS 26 起 `AppleHDA` 被移除、SMBIOS 门槛提高，本配置不能直接照搬。
-- `boot-args` 是开发态：带 `-v`、`debug=0x100`、`keepsyms=1` 和一整套 MT7922 调试开关。
+- `boot-args` 是开发态：带 `-v`、`debug=0x100`、`keepsyms=1`、`gfxrst=4` 和一整套 MT7922 调试开关。
+- 本次取证时 Wi-Fi 无线电是关闭的；蓝牙控制器没有起来。这两项不要按"已工作"理解。
 - 双系统机器改动 ESP 会同时影响 Windows 与 macOS 的引导，操作前先整份备份 ESP。
 
 ## 许可

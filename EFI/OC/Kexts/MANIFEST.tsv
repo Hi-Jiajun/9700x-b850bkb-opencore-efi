@@ -7,6 +7,10 @@ BlueToolFixup.kext	2.7.2	as.acidanthera.BlueToolFixup	yes	Acidanthera BrcmPatchR
 IO80211FamilyLegacy.kext	12.0 (1200.12.2b1)	com.apple.iokit.IO80211FamilyLegacy	yes	Apple stock kext - NOT redistributed
 IOSkywalkFamily.kext	1.0	com.apple.iokit.IOSkywalkFamily	yes	Apple stock kext - NOT redistributed
 Lilu.kext	1.7.3	as.vit9696.Lilu	yes	Acidanthera Lilu (BSD-3-Clause)
+NMHDA.kext	1.0.0	com.nullmoth.NMHDA	yes	NullMoth Systems NMHDA - not redistributed here
+NMHDALink.kext	1.0.0	com.nullmoth.NMHDALink	no	NullMoth Systems NMHDALink - not redistributed here
+NMHDAVol.kext	1.0.0	com.nullmoth.NMHDAVol	no	NullMoth Systems NMHDAVol - not redistributed here
+NMProbeAudio.kext	1.0.0	com.nullmoth.NMProbeAudio	no	NullMoth probe-only kext - not redistributed here
 NVMeFix.kext	1.1.4	org.acidanthera.NVMeFix	yes	Acidanthera NVMeFix (BSD-3-Clause)
 RTL812xLucy.kext	1.1.1 (1.1.100)	com.insanelymac.RTL812xLucy	yes	Laura Mueller (Mieze) LucyRTL8125Ethernet (GPL-2.0)
 RestrictEvents.kext	1.1.7	as.vit9696.RestrictEvents	yes	Acidanthera RestrictEvents (BSD-3-Clause)

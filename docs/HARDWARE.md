@@ -39,6 +39,12 @@ macOS 15 需要 `IOSkywalkFamily` + `IO80211FamilyLegacy` 两个 Apple kext 作�
 
 - `VirtualSMC` + `SMCProcessor`/`SMCSuperIO` 未随仓库分发；本机 EFI 只带 `VirtualSMC` 主 kext。
 - `AppleALC` 使用 `alcid=3` 驱动板载 ALC1220。
+- NullMoth `NMHDA` 负责 HDMI 音频；`NMHDALink` / `NMHDAVol` / `NMProbeAudio` 为实验件，保持禁用。
 - `NVMeFix` 处理 NVMe 电源管理。
 - `RestrictEvents` 用于压制无关的 CPU 型号提示。
 - `USBToolBox` + `UTBMap` 固化 USB 端口映射，绕开 15 端口上限。
+
+## EFI 之外
+
+Mellanox ConnectX-3 的 `Cx3Mlx4` 驱动装在 `/Library/Extensions`，不在这份 EFI 里；
+换机或重装系统后需要单独安装。

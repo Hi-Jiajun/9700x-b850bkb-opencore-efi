@@ -1,10 +1,10 @@
 {
-  "source_commit": "2d1c659",
-  "source_config_sha256": "0f1a677f052cdd3270bae18863ba13acd75d8cbda96d6b00ced432ab63a6afd7",
-  "public_config_sha256": "c68d67b154aa7ba7e3c5aa73f2984d89af7782963472f02f90b89eca2d5d4bcc",
+  "source_commit": "136eebf",
+  "source_config_sha256": "3dad2596c1b3457c956e0c1308a560a9ca1cd9cc9c1cfd705963ace3f57e4292",
+  "public_config_sha256": "aa0fc0cc121212cc6276f2d063fa310c6d6bd36477a2a2bb50a89d90577ccb41",
   "smbios_product": "MacPro7,1",
   "acpi_tables": 5,
-  "kexts": 18,
+  "kexts": 22,
   "drivers": 5,
   "tools": 1,
   "sanitized_fields": [
