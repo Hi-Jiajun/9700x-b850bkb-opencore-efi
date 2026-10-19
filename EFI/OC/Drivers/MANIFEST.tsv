@@ -1,0 +1,6 @@
+file	bytes	sha256	provenance
+HfsPlus.efi	37892	a55b5fff36578864ba6792c4c6369c71f6f35b61dd5a853ddf8583cd36c31d8f	Apple driver shipped with OpenCore releases - not redistributed here
+NullMothLogo.efi	539648	050d7574577ce03db22933311d4f6e4dbe0debb71a79b89a8fccdf61841f44fd	NullMoth project - not redistributed here
+OpenCanopy.efi	151552	2fb55e04454a6842842990b960a087b0cc679cfabf2c8cd2b80142bf532bf9e8	OpenCore 1.0.9 (BSD-3-Clause)
+OpenRuntime.efi	32768	c6675612727aa03ec561b80535e61a9f30fcc75d76904933b6b10482e1362753	OpenCore 1.0.9 (BSD-3-Clause)
+ResetNvramEntry.efi	57344	cff34d24e36193709c78769e0a613f2cedf5a8595dd038e3b6d6ee1e7a7013eb	OpenCore 1.0.9 (BSD-3-Clause)

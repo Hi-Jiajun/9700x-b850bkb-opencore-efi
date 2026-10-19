@@ -1,0 +1,16 @@
+{
+  "source_commit": "b00b5f5",
+  "source_config_sha256": "0f1a677f052cdd3270bae18863ba13acd75d8cbda96d6b00ced432ab63a6afd7",
+  "public_config_sha256": "c68d67b154aa7ba7e3c5aa73f2984d89af7782963472f02f90b89eca2d5d4bcc",
+  "smbios_product": "MacPro7,1",
+  "acpi_tables": 5,
+  "kexts": 18,
+  "drivers": 5,
+  "tools": 1,
+  "sanitized_fields": [
+    "SystemSerialNumber",
+    "MLB",
+    "SystemUUID",
+    "ROM"
+  ]
+}
